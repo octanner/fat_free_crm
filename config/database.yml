@@ -1,0 +1,18 @@
+---
+development: &development
+  adapter: postgresql
+  database: fat_free_crm_development
+  host:     localhost
+  schema_search_path: public
+  min_messages: warning
+  # port:     5432
+  # username:
+  # password:
+
+test:
+  <<: *development
+  database: fat_free_crm_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+
