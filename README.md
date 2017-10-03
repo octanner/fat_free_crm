@@ -1,3 +1,10 @@
+# The Simply Product Team CRM
+
+We got tired of keeping notes in text files, and didn't want to clutter the sales CRM with non-sales info, so we created this.
+
+It is hosted on Heroku 
+
+
 # Fat Free CRM [![TravisCI][travis-img-url]][travis-ci-url]  [![Code Climate][codeclimate-img-url]][codeclimate-url]
 
 [travis-img-url]: https://secure.travis-ci.org/fatfreecrm/fat_free_crm.svg?branch=master
