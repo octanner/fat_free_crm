@@ -5,10 +5,12 @@ RUN mkdir -p ${APP_DIR}
 ADD . ${APP_DIR}
 WORKDIR ${APP_DIR}
 
-RUN bin/rails db:environment:set RAILS_ENV=production \
-  && bin/rails db:migrate RAILS_ENV=production \
-  && bin/rails assets:precompile \
-  && bin/rails server -e production -p 5000
+RUN bundle exec rake db:migrate && rake ffcrm:setup:admin USERNAME=admin PASSWORD=password EMAIL=admin@example.com
+
+# RUN bin/rails db:environment:set RAILS_ENV=production
+# RUN bin/rails db:migrate RAILS_ENV=production \
+# RUN bin/rails assets:precompile \
+# RUN bin/rails server -e production -p 5000
 
 # ARG RUBYGEMS_VERSION=2.6.13
 # ENV RUBYGEMS_VERSION=2.6.13
